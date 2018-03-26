@@ -1,5 +1,7 @@
 # C# - Snake
 ## By Lewis W. Miller
+### A demonstration in using objects and their children to play videogames. Also, double buffering  
+
 
 A nice and friendly game of good old Snake, now with added OOPs.  
 Not even the sneks are safe from me.
