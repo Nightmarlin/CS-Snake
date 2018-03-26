@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSnek));
 			this.tblPnlGame = new System.Windows.Forms.TableLayoutPanel();
-			this.snekPanel = new Snek.SnekPanel();
 			this.PnlControl = new System.Windows.Forms.Panel();
 			this.LblScoreCount = new System.Windows.Forms.Label();
 			this.LblTickSpeed = new System.Windows.Forms.Label();
@@ -33,6 +33,7 @@
 			this.BtnStartStop = new System.Windows.Forms.Button();
 			this.TmrFrameTick = new System.Windows.Forms.Timer(this.components);
 			this.TmrMakeFud = new System.Windows.Forms.Timer(this.components);
+			this.snekPanel = new Snek.SnekPanel();
 			this.tblPnlGame.SuspendLayout();
 			this.PnlControl.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.TbarTickRate)).BeginInit();
@@ -53,15 +54,6 @@
 			this.tblPnlGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tblPnlGame.Size = new System.Drawing.Size(784, 411);
 			this.tblPnlGame.TabIndex = 1;
-			// 
-			// snekPanel
-			// 
-			this.snekPanel.BackColor = System.Drawing.Color.Black;
-			this.snekPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.snekPanel.Location = new System.Drawing.Point(3, 3);
-			this.snekPanel.Name = "snekPanel";
-			this.snekPanel.Size = new System.Drawing.Size(582, 405);
-			this.snekPanel.TabIndex = 0;
 			// 
 			// PnlControl
 			// 
@@ -137,12 +129,22 @@
 			// 
 			this.TmrMakeFud.Interval = 5000;
 			// 
+			// snekPanel
+			// 
+			this.snekPanel.BackColor = System.Drawing.Color.Black;
+			this.snekPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.snekPanel.Location = new System.Drawing.Point(3, 3);
+			this.snekPanel.Name = "snekPanel";
+			this.snekPanel.Size = new System.Drawing.Size(582, 405);
+			this.snekPanel.TabIndex = 0;
+			// 
 			// FrmSnek
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(784, 411);
 			this.Controls.Add(this.tblPnlGame);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
 			this.Name = "FrmSnek";
 			this.Text = "Snekkysnek McSneksnekface";
