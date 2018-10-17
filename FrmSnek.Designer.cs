@@ -26,6 +26,7 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSnek));
 			this.tblPnlGame = new System.Windows.Forms.TableLayoutPanel();
+			this.snekPanel = new Snek.SnekPanel();
 			this.PnlControl = new System.Windows.Forms.Panel();
 			this.LblScoreCount = new System.Windows.Forms.Label();
 			this.LblTickSpeed = new System.Windows.Forms.Label();
@@ -33,7 +34,6 @@
 			this.BtnStartStop = new System.Windows.Forms.Button();
 			this.TmrFrameTick = new System.Windows.Forms.Timer(this.components);
 			this.TmrMakeFud = new System.Windows.Forms.Timer(this.components);
-			this.snekPanel = new Snek.SnekPanel();
 			this.tblPnlGame.SuspendLayout();
 			this.PnlControl.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.TbarTickRate)).BeginInit();
@@ -54,6 +54,15 @@
 			this.tblPnlGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tblPnlGame.Size = new System.Drawing.Size(784, 411);
 			this.tblPnlGame.TabIndex = 1;
+			// 
+			// snekPanel
+			// 
+			this.snekPanel.BackColor = System.Drawing.Color.Black;
+			this.snekPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.snekPanel.Location = new System.Drawing.Point(3, 3);
+			this.snekPanel.Name = "snekPanel";
+			this.snekPanel.Size = new System.Drawing.Size(582, 405);
+			this.snekPanel.TabIndex = 0;
 			// 
 			// PnlControl
 			// 
@@ -105,6 +114,7 @@
 			this.TbarTickRate.TabIndex = 1;
 			this.TbarTickRate.TickStyle = System.Windows.Forms.TickStyle.Both;
 			this.TbarTickRate.Value = 4;
+			this.TbarTickRate.MouseLeave += new System.EventHandler(this.TBarTickRate_MouseLeave);
 			// 
 			// BtnStartStop
 			// 
@@ -128,15 +138,6 @@
 			// TmrMakeFud
 			// 
 			this.TmrMakeFud.Interval = 5000;
-			// 
-			// snekPanel
-			// 
-			this.snekPanel.BackColor = System.Drawing.Color.Black;
-			this.snekPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.snekPanel.Location = new System.Drawing.Point(3, 3);
-			this.snekPanel.Name = "snekPanel";
-			this.snekPanel.Size = new System.Drawing.Size(582, 405);
-			this.snekPanel.TabIndex = 0;
 			// 
 			// FrmSnek
 			// 

@@ -13,7 +13,7 @@ namespace Snek {
 		Snook TheSnek;
 		List<Fud> FudList;
 		int Score = 0;
-
+		
 		public FrmSnek() {
 			InitializeComponent();
 			this.Load += new EventHandler(FrmSnek_Load);
@@ -25,7 +25,7 @@ namespace Snek {
 			TbarTickRate.ValueChanged += new EventHandler(TBarTickRate_ValueChanged);
 			TBarTickRate_ValueChanged(null, null);
 		}
-
+		
 		private void BtnStartStop_Click(object sender, EventArgs e) {
 			Score = 0;
 			LblScoreCount.Text = "Score: 0";
@@ -71,7 +71,6 @@ namespace Snek {
 
 		private void OnKeyPress(object sender, KeyEventArgs e) {
 			switch (e.KeyCode) {
-				case Keys.Up:
 				case Keys.W:
 					Console.WriteLine("W");
 					if (TheSnek.YDir == 0) {
@@ -79,7 +78,6 @@ namespace Snek {
 						TheSnek.XDir = 0;
 					}
 					break;
-				case Keys.Left:
 				case Keys.A:
 					Console.WriteLine("A");
 					if (TheSnek.XDir == 0) {
@@ -87,7 +85,6 @@ namespace Snek {
 						TheSnek.YDir = 0;
 					}
 					break;
-				case Keys.Down:
 				case Keys.S:
 					Console.WriteLine("S");
 					if (TheSnek.YDir == 0) {
@@ -95,7 +92,6 @@ namespace Snek {
 						TheSnek.XDir = 0;
 					}
 					break;
-				case Keys.Right:
 				case Keys.D:
 					Console.WriteLine("D");
 					if (TheSnek.XDir == 0) {
@@ -153,6 +149,11 @@ namespace Snek {
 				BtnStartStop_Click(null, null);
 			}
 		}
+
+		private void TBarTickRate_MouseLeave(object sender, EventArgs e) {
+			BtnStartStop.Focus();
+		}
+
 	}
 }
 
